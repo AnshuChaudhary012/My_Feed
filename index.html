@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Feed</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-poppins">
+    <header class="pt-[17px] pb-[18px]">
+        <div class="container max-w-[1362px] w-full mx-auto px-4  flex items-center justify-between">
+            <div class="h-left flex items-center ">
+                <!-- hamburg -->
+                <!-- <img class="hb lg:hidden mr-2" src="assets/images/hamburg.png" alt="hamburg" width="24" height="24"> -->
+                <div class="lg:hidden">
+
+                    <!-- Checkbox -->
+                    <input type="checkbox" id="menu-toggle" class="sr-only peer">
+
+                    <!-- Your hamburger image -->
+                    <label for="menu-toggle" class="cursor-pointer relative z-[100]">
+                        <img class="hb" src="assets/images/hamburg.png" alt="Menu" width="24" height="24">
+                    </label>
+
+                    <!-- Full-screen menu -->
+                    <div class="hidden peer-checked:flex
+               fixed inset-0 z-50
+               bg-slate-100
+               flex-col items-center justify-center gap-8 w-[50%]">
+                        <a href="#"
+                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Home</a>
+                        <a href="#"
+                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Contact</a>
+                        <a href="#"
+                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Feed</a>
+                        <a href="#"
+                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Wallet</a>
+                    </div>
+                </div>
+                <!-- logo -->
+                <a href="" class="logo"><img class="lg:w-[218px] h-auto" src="assets/images/logo.png" alt="logo"
+                        width="218" height="60"></a>
+                <ul
+                    class="h-link hidden lg:flex ms-[63px] gap-[59px] text-lg font-normal leading-none tracking-normal ">
+                    <li><a class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300"
+                            href="#">Feed</a></li>
+                    <li><a class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300"
+                            href="#">Wallet</a></li>
+                </ul>
+            </div>
+            <div class="h-right flex items-center gap-[25px]">
+                <img class="hidden search_icon" src="assets/images/search.svg" alt="search_svg">
+                <input
+                    class="min-w-[315px] w-full rounded-[25.5px] py-2 px-6 text-lg hidden lg:block font-normal leading-[100%] h-[43px]"
+                    type="text" placeholder="Search here...">
+                <label
+                    class="relative inline-block sm:min-w-[40px] sm:h-[23px] min-w-[25px] h-[14.38px] cursor-pointer">
+                    <!-- Checkbox -->
+                    <input type="checkbox" class="peer sr-only">
+                    <!-- Switch background -->
+                    <span
+                        class="absolute inset-0 rounded-full bg-[#F0F0F0] transition-colors duration-300 peer-checked:bg-black"></span>
+                    <!-- Circle -->
+                    <span
+                        class="absolute left-[2px] sm:top-[2px] size-[14.38px] sm:size-[19px] rounded-full bg-black transition-transform duration-300 sm:peer-checked:translate-x-[17px] peer-checked:translate-x-[8px]"></span>
+                </label>
+                <img class="user_img cursor-pointer" src="assets/images/h-img.png" alt="nav_img" width="57" height="57">
+            </div>
+        </div>
+    </header>
+    <main class="bg-[#F8F8F8]">
+        <div class="main-son container max-w-[1362px] w-full mx-auto flex gap-[40px] px-4 pt-[49px]">
+            <div class="m-left flex gap-4 lg:gap-[31px] flex-col">
+                <!-- card 1 -->
+                <div
+                    class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033]">
+                    <div class="card-head flex justify-between mb-[33px]">
+                        <div class="name-photo flex items-center gap-[17px]">
+                            <img class="" src="assets/images/c1.png" alt="Jhone doe" width="48" height="48">
+                            <p class="username">Jhone doe</p>
+                        </div>
+                        <img src="assets/images/c1.svg" alt="more_option">
+                    </div>
+                    <div class="card-body">
+                        <img class="max-w-[891px] w-full h-auto" src="assets/images/c1_img2.png" alt="card_img"
+                            width="891" height="476">
+                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 19C17.771 19 19.657 19 20.828 17.828C22 16.657 22 14.771 22 11C22 7.229 22 5.343 20.828 4.172C19.657 3 17.771 3 14 3H10C6.229 3 4.343 3 3.172 4.172C2 5.343 2 7.229 2 11C2 14.771 2 16.657 3.172 17.828C3.825 18.482 4.7 18.771 6 18.898"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14 19C12.764 19 11.402 19.5 10.159 20.145C8.161 21.182 7.162 21.701 6.67 21.37C6.178 21.04 6.271 20.015 6.458 17.966L6.5 17.5"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div
+                            class="comment max-w-[891px] w-full py-[6.5px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
+                            <input class="outline-none font-normal" type="text" placeholder="Add a comment...">
+                            <p
+                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300">
+                                post</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div
+                    class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033]">
+                    <div class="card-head flex justify-between mb-[33px]">
+                        <div class="name-photo flex items-center gap-[17px]">
+                            <img class="" src="assets/images/c2.png" alt="Jhone doe" width="48" height="48">
+                            <p class="username">Jhone doe</p>
+                        </div>
+                        <img src="assets/images/c1.svg" alt="more_option">
+                    </div>
+                    <div class="card-body">
+                        <div class="card_img_parent max-w-[889px] w-full flex justify-center">
+                            <img class="" src="assets/images/c2_img2.png" alt="card_img" width="476" height="476">
+                        </div>
+                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 19C17.771 19 19.657 19 20.828 17.828C22 16.657 22 14.771 22 11C22 7.229 22 5.343 20.828 4.172C19.657 3 17.771 3 14 3H10C6.229 3 4.343 3 3.172 4.172C2 5.343 2 7.229 2 11C2 14.771 2 16.657 3.172 17.828C3.825 18.482 4.7 18.771 6 18.898"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14 19C12.764 19 11.402 19.5 10.159 20.145C8.161 21.182 7.162 21.701 6.67 21.37C6.178 21.04 6.271 20.015 6.458 17.966L6.5 17.5"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+
+
+                        </div>
+                        <div
+                            class="comment max-w-[891px] w-full py-[6.5px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
+                            <input class="outline-none font-normal" type="text" placeholder="Add a comment...">
+                            <p
+                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300">
+                                post</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div
+                    class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033]">
+                    <div class="card-head flex justify-between mb-[33px]">
+                        <div class="name-photo flex items-center gap-[17px]">
+                            <img class="" src="assets/images/c3.png" alt="Jhone doe" width="48" height="48">
+                            <p class="username">Jhone doe</p>
+                        </div>
+                        <img src="assets/images/c1.svg" alt="more_option">
+                    </div>
+                    <div class="card-body">
+                        <img class="max-w-[891px] w-full h-auto" src="assets/images/c3_img2.png" alt="card_img"
+                            width="891" height="476">
+                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 19C17.771 19 19.657 19 20.828 17.828C22 16.657 22 14.771 22 11C22 7.229 22 5.343 20.828 4.172C19.657 3 17.771 3 14 3H10C6.229 3 4.343 3 3.172 4.172C2 5.343 2 7.229 2 11C2 14.771 2 16.657 3.172 17.828C3.825 18.482 4.7 18.771 6 18.898"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14 19C12.764 19 11.402 19.5 10.159 20.145C8.161 21.182 7.162 21.701 6.67 21.37C6.178 21.04 6.271 20.015 6.458 17.966L6.5 17.5"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div
+                            class="comment max-w-[891px] w-full py-[6.5px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
+                            <input class="outline-none font-normal" type="text" placeholder="Add a comment...">
+                            <p
+                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300">
+                                post</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div
+                    class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033] mb-[41px] lg:mb-[76px]">
+                    <div class="card-head flex justify-between mb-[33px]">
+                        <div class="name-photo flex items-center gap-[17px]">
+                            <img class="" src="assets/images/c4.png" alt="Jhone doe" width="48" height="48">
+                            <p class="username">Jhone doe</p>
+                        </div>
+                        <img src="assets/images/c1.svg" alt="more_option">
+                    </div>
+                    <div class="card-body">
+                        <div class="card_img_parent max-w-[889px] w-full flex justify-center">
+                            <img class="" src="assets/images/c4_img2.png" alt="card_img" width="476" height="476">
+                        </div>
+                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 19C17.771 19 19.657 19 20.828 17.828C22 16.657 22 14.771 22 11C22 7.229 22 5.343 20.828 4.172C19.657 3 17.771 3 14 3H10C6.229 3 4.343 3 3.172 4.172C2 5.343 2 7.229 2 11C2 14.771 2 16.657 3.172 17.828C3.825 18.482 4.7 18.771 6 18.898"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14 19C12.764 19 11.402 19.5 10.159 20.145C8.161 21.182 7.162 21.701 6.67 21.37C6.178 21.04 6.271 20.015 6.458 17.966L6.5 17.5"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div
+                            class="comment max-w-[891px] w-full py-[6.5px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
+                            <input class="outline-none font-normal" type="text" placeholder="Add a comment...">
+                            <p
+                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300">
+                                post</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="m-right max-w-[339px] w-full  lg:inline-block sticky top-[49px] h-fit">
+                <p class="filter opacity-[60%] text-lg font-normal leading-[100%] mb-[21px]">Filters</p>
+                <div class="btns lg:hidden flex gap-[10px]">
+                    <label for="btn-checkbox1">
+                        <input type="checkbox" class="sr-only peer" id="btn-checkbox1">
+                        <span
+                            class="px-[12px] py-[5px] text-[#00000099] text-xs bg-[#0000001A] rounded-[25.5px] font-semibold peer-checked:text-white peer-checked:bg-black h-7 inline-block min-w-[88px]">Most
+                            Liked</span>
+                    </label>
+                    <label for="btn-checkbox">
+                        <input type="checkbox" class="sr-only peer" id="btn-checkbox">
+                        <span
+                            class="px-[12px] py-[5px] text-xs text-[#00000099] bg-[#0000001A] rounded-[25.5px] font-semibold peer-checked:text-white peer-checked:bg-black leading-[18px] w-[134px] inline-block h-7">
+                            Recently Received</span>
+                    </label>
+
+                </div>
+
+                <!-- checkboxes -->
+                <!-- 1st checkbox -->
+                <label class=" items-center gap-5 cursor-pointer mb-[13px] hidden lg:flex">
+                    <input type="checkbox" class="sr-only peer">
+                    <div class="checkbox-parent relative w-[28px] h-[28px]">
+                        <span class=" big-circle w-7 h-7 rounded-full bg-[#DFDFDF] z-0 absolute"></span>
+                        <span
+                            class="small-circle w-[14px] circle h-[14px] rounded-full bg-white z-10 absolute left-[7px] top-[7px] ">
+                    </div>
+                    <p class="font-normal text-lg leading-[100%] opacity-[60%]">Most Liked</p>
+                </label>
+                <!-- 2nd checkbox -->
+                <label class="lg:flex items-center gap-5 cursor-pointer hidden ">
+                    <input type="checkbox" class="sr-only peer">
+                    <div class="checkbox-parent relative w-[28px] h-[28px]">
+                        <span class=" big-circle w-7 h-7 rounded-full bg-[#DFDFDF] z-0 absolute"></span>
+                        <span
+                            class="small-circle w-[14px] circle h-[14px] rounded-full bg-white z-10 absolute left-[7px] top-[7px] ">
+                    </div>
+                    <p class="font-normal text-lg leading-[100%] opacity-[60%]">Recently Received</p>
+                </label>
+
+                <div class="sug mt-[39px]">
+                    <p class="font-normal opacity-[60%] text-lg leading-[100%] mb-[22px]">Suggestions for you</p>
+                    <div class="users gap-4 flex flex-col">
+                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name flex items-center gap-[17px]">
+                                <img src="assets/images/user1.png" alt="user_photo" height="48" width="48">
+                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                            </div>
+                            <p
+                                class="follow text-[#1A9FFF] font-normal text-lg  hover:text-xl hover:cursor-pointer transition duration-300 leading-[100%]">
+                                Follow</p>
+                        </div>
+                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name flex items-center gap-[17px]">
+                                <img src="assets/images/user2.png" alt="user_photo" height="48" width="48">
+                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                            </div>
+                            <p
+                                class="follow text-[#1A9FFF] font-normal text-lg  hover:text-xl hover:cursor-pointer transition duration-300 leading-[100%]">
+                                Follow</p>
+                        </div>
+                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name flex items-center gap-[17px]">
+                                <img src="assets/images/user3.png" alt="user_photo" height="48" width="48">
+                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                            </div>
+                            <p
+                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-xl hover:cursor-pointer transition duration-300">
+                                Follow</p>
+                        </div>
+                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name flex items-center gap-[17px]">
+                                <img src="assets/images/user4.png" alt="user_photo" height="48" width="48">
+                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                            </div>
+                            <p
+                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-xl hover:cursor-pointer transition duration-300">
+                                Follow</p>
+                        </div>
+                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name flex items-center gap-[17px]">
+                                <img src="assets/images/user5.png" alt="user_photo" height="48" width="48">
+                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                            </div>
+                            <p
+                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-xl hover:cursor-pointer transition duration-300">
+                                Follow</p>
+                        </div>
+                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name flex items-center gap-[17px]">
+                                <img src="assets/images/user6.png" alt="user_photo" height="48" width="48">
+                                <p class="username text-xs lg:text-lg   ">Jhone doe</p>
+                            </div>
+                            <p
+                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-xl hover:cursor-pointer transition duration-300">
+                                Follow</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- copywrite -->
+                <p
+                    class="hidden lg:block copywrite cursor-pointer opacity-[60%] mt-[42px] text-sm leading-[150%] font-normal tracking-wider">
+                    Copyright@2021</p>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
