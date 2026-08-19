@@ -16,9 +16,15 @@
              /* using in color like text-blue bg-red etc */
              --color-custom-blue: #1A9FFF;
              /* only for spacing in mt pt p m in gap  etc */
+             --spacing-custom-9 :9px;
              --spacing-custom-18 :18px;
              --spacing-custom-17 :17px;
              --spacing-custom-25 :25px;
+             --spacing-custom-26 :26px;
+             --spacing-custom-29 :29px;
+             --spacing-custom-31 :31px;
+             --spacing-custom-37 :37px;
+             --spacing-custom-63 :63px;
              /* for shadows only */
              --shadow-header: 0px 4px 35px 0px #00000014;
              /* it will use inside mx-w-...  */
@@ -40,7 +46,7 @@
 </head>
 
 <body class="font-poppins">
-    <header class="pt-custom-17 pb-custom-18 shadow-header max-sm:pt-[9px] max-sm:pb-[9px]">
+    <header class="pt-custom-17 pb-custom-18 shadow-header max-sm:pt-custom-9 max-sm:pb-custom-9">
         <div class="container max-w-header w-full mx-auto px-4  flex items-center justify-between">
             <div class="h-left max-lg:gap-[22px] flex items-center max-sm:gap-[18px]">
                 <div class="lg:hidden">
@@ -68,7 +74,7 @@
                 <a href="" class="logo"><img class="lg:w-[218px] h-auto max-sm:w-[109.11px] max-sm:h-[32px] "
                         src="assets/images/logo.png" alt="logo" width="218" height="60"></a>
                 <ul
-                    class="h-link hidden lg:flex ms-[63px] gap-[59px] text-lg font-normal leading-none tracking-normal ">
+                    class="h-link hidden lg:flex ms-custom-63 gap-[59px] text-lg font-normal leading-none tracking-normal ">
                     <li><a class="opacity-60 hover:text-black hover:opacity-100 transition duration-300"
                             href="#">Feed</a></li>
                     <li><a class="opacity-60 hover:text-black hover:opacity-100 transition duration-300"
@@ -106,8 +112,8 @@
                     class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px]">
                     <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c1.png" alt="Jhone doe" width="48"
-                                height="48">
+                            <img class="max-sm:w-8 max-sm:h-8 cursor-pointer" src="assets/images/c1.png" alt="Jhone doe"
+                                width="48" height="48">
                             <p class="username opacity-60 text-lg leading-150  max-sm:text-xs">Jhone doe</p>
                         </div>
                         <img class="lg:size-5" height="12" width="12" src="assets/images/c1.svg" alt="more_option">
@@ -147,8 +153,8 @@
                     class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px] max-sm:pt-3 max-sm:pb-[22px]">
                     <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c2.png" alt="Jhone doe" width="48"
-                                height="48">
+                            <img class="max-sm:w-8 max-sm:h-8 cursor-pointer" src="assets/images/c2.png" alt="Jhone doe"
+                                width="48" height="48">
                             <p class="username text-lg leading-150 opacity-60 max-sm:text-xs">Jhone doe</p>
                         </div>
                         <img class="lg:size-5" height="12" width="12" src="assets/images/c1.svg" alt="more_option">
@@ -192,8 +198,8 @@
                     class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px]">
                     <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c3.png" alt="Jhone doe" width="48"
-                                height="48">
+                            <img class="max-sm:w-8 max-sm:h-8 cursor-pointer" src="assets/images/c3.png" alt="Jhone doe"
+                                width="48" height="48">
                             <p class="username text-lg leading-150 opacity-60 max-sm:text-xs">Jhone doe</p>
                         </div>
                         <img src="assets/images/c1.svg" alt="more_option " class="lg:size-5" height="12" width="12">
@@ -233,8 +239,8 @@
                     class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033] mb-[41px] lg:mb-[76px] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px] ">
                     <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c4.png" alt="Jhone doe" width="48"
-                                height="48">
+                            <img class="max-sm:w-8 max-sm:h-8 cursor-pointer" src="assets/images/c4.png" alt="Jhone doe"
+                                width="48" height="48">
                             <p class="username text-lg leading-150 opacity-60 max-sm:text-xs">Jhone doe</p>
                         </div>
                         <img class="max-sm:size-3" src="assets/images/c1.svg" alt="more_option" class="lg:size-5 size-3"
@@ -285,12 +291,11 @@
                         Liked
                     </span>
                     <span
-                        class="px-[12px] py-[5px] text-xs text-[#00000099] bg-[#0000001A] rounded-[25.5px] hover:font-semibold hover:text-white hover:bg-black leading-[18px] w-[134px] inline-block h-7 cursor-pointer font-normal">
+                        class="px-[12px] py-[5px] text-xs text-[#00000099] bg-[#0000001A] rounded-[25.5px] hover:font-semibold hover:text-white hover:bg-black leading-[18px] w-[134px] inline-block h-7 cursor-pointer font-normal text-center">
                         Recently Received
                     </span>
                     </label>
                 </div>
-
                 <!-- checkboxes -->
                 <!-- 1st checkbox -->
                 <label class=" items-center gap-5 cursor-pointer mb-[13px] hidden lg:flex">
