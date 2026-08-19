@@ -8,57 +8,86 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="images/svg" href="assets/images/favicon.svg">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";  
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        @theme {
+             --font-poppins: "Poppins", sans-serif;
+             /* using in color like text-blue bg-red etc */
+             --color-custom-blue: #1A9FFF;
+             /* only for spacing in mt pt p m in gap  etc */
+             --spacing-custom-18 :18px;
+             --spacing-custom-17 :17px;
+             --spacing-custom-25 :25px;
+             /* for shadows only */
+             --shadow-header: 0px 4px 35px 0px #00000014;
+             /* it will use inside mx-w-...  */
+             --container-header: 1362px;
+             --z-100:100;
+             /* leading or line-height in percentage */
+             --leading-100:100%;
+             --leading-150:150%;
+             --leading-133:133%;
+        }
+
+            .peer:checked ~ .checkbox-parent .big-circle {
+               background-color: #1a9fff !important;
+               opacity: 10%;
+            }
+            .peer:checked ~ .checkbox-parent .small-circle {
+              background-color: #1a9fff !important;
+            }
+    </style>
 </head>
 
 <body class="font-poppins">
-    <header class="pt-[17px] pb-[18px] shadow-[0px_4px_35px_0px_#00000014]">
-        <div class="container max-w-[1362px] w-full mx-auto px-4  flex items-center justify-between">
-            <div class="h-left flex items-center ">
-                <!-- hamburg -->
-                <!-- <img class="hb lg:hidden mr-2" src="assets/images/hamburg.png" alt="hamburg" width="24" height="24"> -->
+    <header class="pt-custom-17 pb-custom-18 shadow-header max-sm:pt-[9px] max-sm:pb-[9px]">
+        <div class="container max-w-header w-full mx-auto px-4  flex items-center justify-between">
+            <div class="h-left max-lg:gap-[22px] flex items-center max-sm:gap-[18px]">
                 <div class="lg:hidden">
                     <!-- Checkbox -->
                     <input type="checkbox" id="menu-toggle" class="sr-only peer">
-
                     <!-- Your hamburger image -->
-                    <label for="menu-toggle" class="cursor-pointer relative z-[100]">
-                        <img class="hb" src="assets/images/hamburg.png" alt="Menu" width="24" height="24">
+                    <label for="menu-toggle" class="cursor-pointer relative z-100">
+                        <img class="hb max-lg:w-[50px] max-lg:h-[50px] max-sm:w-6 max-sm:h-6 max-sm:mr-0"
+                            src="assets/images/hamburg.png" alt="Menu" width="24" height="24">
                     </label>
                     <!-- Full-screen menu -->
                     <div class="hidden peer-checked:flex
-               fixed inset-0 z-50
-               bg-slate-100
-               flex-col items-center justify-center gap-8 w-[50%]">
+                    fixed inset-0 z-50
+                    bg-slate-100
+                    flex-col items-center justify-center gap-8 w-1/2">
                         <a href="#"
-                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Home</a>
+                            class="opacity-60 hover:text-black hover:opacity-100 transition duration-300">Home</a>
                         <a href="#"
-                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Contact</a>
+                            class="opacity-60 hover:text-black hover:opacity-100 transition duration-300">Contact</a>
                         <a href="#"
-                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Feed</a>
+                            class="opacity-60 hover:text-black hover:opacity-100 transition duration-300">Feed</a>
                         <a href="#"
-                            class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300">Wallet</a>
+                            class="opacity-60 hover:text-black hover:opacity-100 transition duration-300">Wallet</a>
                     </div>
                 </div>
                 <!-- logo -->
-                <a href="" class="logo"><img class="lg:w-[218px] h-auto" src="assets/images/logo.png" alt="logo"
-                        width="218" height="60"></a>
+                <a href="" class="logo"><img class="lg:w-[218px] h-auto max-sm:w-[109.11px] max-sm:h-[32px] "
+                        src="assets/images/logo.png" alt="logo" width="218" height="60"></a>
                 <ul
                     class="h-link hidden lg:flex ms-[63px] gap-[59px] text-lg font-normal leading-none tracking-normal ">
-                    <li><a class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300"
+                    <li><a class="opacity-60 hover:text-black hover:opacity-100 transition duration-300"
                             href="#">Feed</a></li>
-                    <li><a class="opacity-[60%] hover:text-black hover:opacity-[100%] transition duration-300"
+                    <li><a class="opacity-60 hover:text-black hover:opacity-100 transition duration-300"
                             href="#">Wallet</a></li>
                 </ul>
             </div>
             <div class="h-right flex items-center gap-[25px]">
-                <img class="hidden search_icon" src="assets/images/search.svg" alt="search_svg">
+                <img class="hidden search_icon max-sm:inline-block max-sm:w-6 max-sm:h-6 max-lg:inline-block max-lg:w-8 max-lg:h-8"
+                    src="assets/images/search.svg" alt="search_svg" height="24" width="24">
                 <input
-                    class="min-w-[315px] w-full rounded-[25.5px] py-2 px-6 text-lg hidden lg:block font-normal leading-[100%] h-[43px]"
+                    class="min-w-[315px] w-full rounded-[25.5px] py-2 px-6 text-lg hidden lg:block font-normal leading-100 h-[43px] border border-[#00000033] outline-none"
                     type="text" placeholder="Search here...">
                 <label
                     class="relative inline-block sm:min-w-[40px] sm:h-[23px] min-w-[25px] h-[14.38px] cursor-pointer">
                     <!-- Checkbox -->
-                    <input type="checkbox" class="peer sr-only">
+                    <input class="border border-[#00000033] outline-none" type="checkbox" class="peer sr-only">
                     <!-- Switch background -->
                     <span
                         class="absolute inset-0 rounded-full bg-[#F0F0F0] transition-colors duration-300 peer-checked:bg-black"></span>
@@ -66,28 +95,31 @@
                     <span
                         class="absolute left-[2px] sm:top-[2px] size-[14.38px] sm:size-[19px] rounded-full bg-black transition-transform duration-300 sm:peer-checked:translate-x-[17px] peer-checked:translate-x-[8px]"></span>
                 </label>
-                <img class="user_img cursor-pointer" src="assets/images/h-img.png" alt="nav_img" width="57" height="57">
+                <img class="user_img cursor-pointer max-sm:w-8 max-sm:h-8 border border-[#00000033] outline-none"
+                    src="assets/images/h-img.png" alt="nav_img" width="57" height="57">
             </div>
         </div>
     </header>
     <main class="bg-[#F8F8F8]">
-        <div class="main-son container max-w-[1362px] w-full mx-auto flex gap-[40px] px-4 pt-[49px]">
-            <div class="m-left flex gap-4 lg:gap-[31px] flex-col">
+        <div
+            class="main-son max-lg:flex max-lg:flex-col-reverse container max-w-[1362px] w-full mx-auto flex gap-[40px] px-4 pt-[49px] max-sm:!pt-4 max-sm:p-0 max-sm:gap-4">
+            <div class="m-left flex gap-4 lg:gap-[31px] flex-col max-sm:pl-4 max-sm:pr-4">
                 <!-- card 1 -->
                 <div
-                    class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033]">
-                    <div class="card-head flex justify-between mb-[33px]">
+                    class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px]">
+                    <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="" src="assets/images/c1.png" alt="Jhone doe" width="48" height="48">
-                            <p class="username text-lg leading-[150%]">Jhone doe</p>
+                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c1.png" alt="Jhone doe" width="48"
+                                height="48">
+                            <p class="username opacity-60 text-lg leading-150  max-sm:text-xs">Jhone doe</p>
                         </div>
                         <img src="assets/images/c1.svg" alt="more_option">
                     </div>
                     <div class="card-body">
                         <img class="max-w-[891px] w-full h-auto" src="assets/images/c1_img2.png" alt="card_img"
                             width="891" height="476">
-                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div class="like-comment max-sm:mt-3 max-sm:mb-[22px] flex gap-[21px] mt-[17px] mb-6">
+                            <svg class="max-sm:w-4 max-sm:h-4" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
@@ -104,31 +136,33 @@
                             </svg>
                         </div>
                         <div
-                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
-                            <input class="outline-none font-normal text-lg leading-[150%]" type="text"
+                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px] max-sm:!px-[15px] max-sm:!py-[7px] max-sm:text-xs border border-[#00000033]">
+                            <input class="outline-none font-normal text-lg leading-150" type="text"
                                 placeholder="Add a comment...">
                             <p
-                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300 lg:text-lg">
+                                class="text-custom-blue font-normal leading-150 hover:text-red-600  hover:cursor-pointer transition duration-300 lg:text-lg">
                                 post</p>
                         </div>
                     </div>
                 </div>
                 <!-- card 2 -->
                 <div
-                    class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033]">
-                    <div class="card-head flex justify-between mb-[33px]">
+                    class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px] max-sm:pt-3 max-sm:pb-[22px]">
+                    <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="" src="assets/images/c2.png" alt="Jhone doe" width="48" height="48">
-                            <p class="username text-lg leading-[150%]">Jhone doe</p>
+                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c2.png" alt="Jhone doe" width="48"
+                                height="48">
+                            <p class="username text-lg leading-150 opacity-60 max-sm:text-xs">Jhone doe</p>
                         </div>
                         <img src="assets/images/c1.svg" alt="more_option">
                     </div>
                     <div class="card-body">
-                        <div class="card_img_parent max-w-[889px] w-full flex justify-center">
+                        <div
+                            class="card_img_parent max-w-[889px] w-full flex justify-center max-sm:border-0 max-sm:mb-px">
                             <img class="" src="assets/images/c2_img2.png" alt="card_img" width="476" height="476">
                         </div>
-                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div class="like-comment max-sm:mt-3 max-sm:mb-[22px] flex gap-[21px] mt-[17px] mb-6">
+                            <svg class="max-sm:w-4 max-sm:h-4" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
@@ -147,30 +181,31 @@
 
                         </div>
                         <div
-                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
-                            <input class="outline-none font-normal text-lg leading-[150%]" type="text"
+                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px] max-sm:!px-[15px] max-sm:!py-[7px] max-sm:text-xs border border-[#00000033]">
+                            <input class="outline-none font-normal text-lg leading-150" type="text"
                                 placeholder="Add a comment...">
                             <p
-                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300">
+                                class="text-custom-blue font-normal leading-150 hover:text-red-600  hover:cursor-pointer transition duration-300">
                                 post</p>
                         </div>
                     </div>
                 </div>
                 <!-- card 3 -->
                 <div
-                    class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033]">
-                    <div class="card-head flex justify-between mb-[33px]">
+                    class=" card container max-w-[951px] px-[29px] pt-[26px] pb-[37px] border-0 border-solid border-[#00000033] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px]">
+                    <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="" src="assets/images/c3.png" alt="Jhone doe" width="48" height="48">
-                            <p class="username text-lg leading-[150%]">Jhone doe</p>
+                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c3.png" alt="Jhone doe" width="48"
+                                height="48">
+                            <p class="username text-lg leading-150 opacity-60 max-sm:text-xs">Jhone doe</p>
                         </div>
                         <img src="assets/images/c1.svg" alt="more_option">
                     </div>
                     <div class="card-body">
                         <img class="max-w-[891px] w-full h-auto" src="assets/images/c3_img2.png" alt="card_img"
                             width="891" height="476">
-                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div class="like-comment max-sm:mt-3 max-sm:mb-[22px] flex gap-[21px] mt-[17px] mb-6">
+                            <svg class="max-sm:w-4 max-sm:h-4" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
@@ -187,31 +222,33 @@
                             </svg>
                         </div>
                         <div
-                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
-                            <input class="outline-none font-normal text-lg leading-[150%]" type="text"
+                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px] max-sm:!px-[15px] max-sm:!py-[7px] max-sm:text-xs border border-[#00000033]">
+                            <input class="outline-none font-normal text-lg leading-150" type="text"
                                 placeholder="Add a comment...">
                             <p
-                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300">
+                                class="text-custom-blue font-normal leading-150 hover:text-red-600  hover:cursor-pointer transition duration-300">
                                 post</p>
                         </div>
                     </div>
                 </div>
                 <!-- card 4 -->
                 <div
-                    class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033] mb-[41px] lg:mb-[76px]">
-                    <div class="card-head flex justify-between mb-[33px]">
+                    class=" card s-card container max-w-[951px] px-[29px] pt-[25px] pb-[36px] border-0 border-solid border-[#00000033] mb-[41px] lg:mb-[76px] max-sm:pt-[13px] max-sm:pr-4 max-sm:pb-[18px] max-sm:pl-[11px] ">
+                    <div class="card-head flex justify-between mb-[33px] max-sm:mb-[13px]">
                         <div class="name-photo flex items-center gap-[17px]">
-                            <img class="" src="assets/images/c4.png" alt="Jhone doe" width="48" height="48">
-                            <p class="username text-lg leading-[150%]">Jhone doe</p>
+                            <img class="max-sm:w-8 max-sm:h-8" src="assets/images/c4.png" alt="Jhone doe" width="48"
+                                height="48">
+                            <p class="username text-lg leading-150 opacity-60 max-sm:text-xs">Jhone doe</p>
                         </div>
-                        <img src="assets/images/c1.svg" alt="more_option">
+                        <img class="max-sm:size-3" src="assets/images/c1.svg" alt="more_option">
                     </div>
                     <div class="card-body">
-                        <div class="card_img_parent max-w-[889px] w-full flex justify-center">
+                        <div
+                            class="card_img_parent max-w-[889px] w-full flex justify-center max-sm:border-0 max-sm:mb-px">
                             <img class="" src="assets/images/c4_img2.png" alt="card_img" width="476" height="476">
                         </div>
-                        <div class="like-comment flex gap-[21px] mt-[17px] mb-6">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div class="like-comment max-sm:mt-3 max-sm:mb-[22px] flex gap-[21px] mt-[17px] mb-6">
+                            <svg class="max-sm:w-4 max-sm:h-4" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
@@ -228,24 +265,26 @@
                             </svg>
                         </div>
                         <div
-                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px]">
-                            <input class="outline-none font-normal placeholder:text-lg leading-[150%]" type="text"
+                            class="comment max-w-[891px] w-full py-[7px] px-6 font-normal text-lg  flex justify-between rounded-[25.5px] max-sm:!px-[15px] max-sm:!py-[7px] max-sm:text-xs border border-[#00000033]">
+                            <input class="outline-none font-normal placeholder:text-lg leading-150" type="text"
                                 placeholder="Add a comment...">
                             <p
-                                class="text-[#1A9FFF] font-normal leading-[150%] hover:text-red-600  hover:cursor-pointer transition duration-300">
+                                class="text-custom-blue font-normal leading-150 hover:text-red-600  hover:cursor-pointer transition duration-300">
                                 post</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="m-right max-w-[339px] w-full  lg:inline-block sticky top-[49px] h-fit">
-                <p class="filter opacity-[60%] text-lg font-normal leading-[100%] mb-[21px]">Filters</p>
+            <div class="m-right max-w-[339px] w-full  lg:inline-block sticky top-[49px] h-fit max-sm:pl-4">
+                <p
+                    class="filter opacity-60 text-lg font-normal leading-100 mb-[21px]  max-sm:mb-[7px] max-sm:text-xs max-sm:font-normal max-sm:leading-150">
+                    Filters</p>
                 <div class="btns lg:hidden flex gap-[10px]">
                     <label for="btn-checkbox1">
                         <input type="checkbox" class="sr-only peer" id="btn-checkbox1">
                         <span
-                            class="px-[12px] py-[5px] text-[#00000099] text-xs bg-[#0000001A] rounded-[25.5px] font-semibold peer-checked:text-white peer-checked:bg-black h-7 inline-block min-w-[88px]">Most
+                            class="px-[12px] py-[5px] text-[#00000099] text-xs bg-[#0000001A] rounded-[25.5px] font-semibold peer-checked:text-white peer-checked:bg-black h-7 inline-block min-w-[88px] max-lg:text-xs max-lg:font-semibold max-lg:leading-[150%] align-middle">Most
                             Liked</span>
                     </label>
                     <label for="btn-checkbox">
@@ -266,7 +305,7 @@
                         <span
                             class="small-circle w-[14px] circle h-[14px] rounded-full bg-white z-10 absolute left-[7px] top-[7px] ">
                     </div>
-                    <p class="font-normal text-lg leading-[100%] opacity-[60%]">Most Liked</p>
+                    <p class="font-normal text-lg leading-100 opacity-60">Most Liked</p>
                 </label>
                 <!-- 2nd checkbox -->
                 <label class="lg:flex items-center gap-5 cursor-pointer hidden ">
@@ -276,71 +315,122 @@
                         <span
                             class="small-circle w-[14px] circle h-[14px] rounded-full bg-white z-10 absolute left-[7px] top-[7px] ">
                     </div>
-                    <p class="font-normal text-lg leading-[100%] opacity-[60%]">Recently Received</p>
+                    <p class="font-normal text-lg leading-100 opacity-60">Recently Received</p>
                 </label>
 
-                <div class="sug mt-[39px]">
-                    <p class="font-normal opacity-[60%] text-lg leading-[100%] mb-[22px]">Suggestions for you</p>
-                    <div class="users gap-4 flex flex-col">
-                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
-                            <div class="photo-name flex items-center gap-[17px]">
+                <div class="sug mt-[39px] max-sm:mt-4">
+                    <p
+                        class="font-normal opacity-60 text-lg leading-100 mb-[22px] max-sm:mb-4 max-sm:text-xs max-sm:font-normal max-sm:leading-[150%]">
+                        Suggestions for you</p>
+                    <div
+                        class="users gap-4 flex flex-col  max-lg:flex-row max-lg:gap-2 max-lg:overflow-x-auto max-lg:overflow-y-hidden">
+                        <div class="flex items-center max-w-[339px] w-full justify-between max-lg:flex-col
+         max-lg:!max-w-[119px]
+         max-lg:!w-full
+         max-lg:border
+         max-lg:border-[#00000033]
+         max-lg:pt-[19px]
+         max-lg:pr-[27px]
+         max-lg:pb-[14px]
+         max-lg:pl-[28px]
+         max-lg:gap-px
+         max-lg:bg-[var(--white)]">
+                            <div class="photo-name
+         max-lg:flex-col
+         max-lg:gap-[9px]
+         max-lg:text-center
+         max-lg:min-w-16
+         max-lg:w-full
+         max-lg:font-normal flex items-center gap-[17px]">
                                 <img src="assets/images/user1.png" alt="user_photo" height="48" width="48">
-                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                                <p class="username text-xs lg:text-lg max-lg:!leading-[150%]">Jhone doe</p>
                             </div>
                             <p
-                                class="follow text-[#1A9FFF] font-normal text-lg  hover:text-red-600 hover:cursor-pointer transition duration-300 leading-[100%]">
+                                class="follow text-xs leading-[150%] transition-colors duration-200 hover:text-red-500 hover:cursor-pointertext-custom-blue font-normal text-lg  hover:text-red-600 hover:cursor-pointer transition duration-300 leading-100">
                                 Follow</p>
                         </div>
-                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
-                            <div class="photo-name flex items-center gap-[17px]">
+                        <div class="max-lg:flex-col
+         max-lg:!max-w-[119px]
+         max-lg:!w-full
+         max-lg:border
+         max-lg:border-[#00000033]
+         max-lg:pt-[19px]
+         max-lg:pr-[27px]
+         max-lg:pb-[14px]
+         max-lg:pl-[28px]
+         max-lg:gap-px
+         max-lg:bg-[var(--white)]flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name
+         max-lg:flex-col
+         max-lg:gap-[9px]
+         max-lg:text-center
+         max-lg:min-w-16
+         max-lg:w-full
+         max-lg:font-normal flex items-center gap-[17px]">
                                 <img src="assets/images/user2.png" alt="user_photo" height="48" width="48">
-                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                                <p class="username text-xs lg:text-lg max-lg:!leading-[150%]">Jhone doe</p>
                             </div>
                             <p
-                                class="follow text-[#1A9FFF] font-normal text-lg  hover:text-red-600 hover:cursor-pointer transition duration-300 leading-[100%]">
+                                class="follow text-xs leading-[150%] transition-colors duration-200 hover:text-red-500 hover:cursor-pointertext-custom-blue font-normal text-lg  hover:text-red-600 hover:cursor-pointer transition duration-300 leading-100">
                                 Follow</p>
                         </div>
-                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
-                            <div class="photo-name flex items-center gap-[17px]">
+                        <div class="max-lg:flex-col
+         max-lg:!max-w-[119px]
+         max-lg:!w-full
+         max-lg:border
+         max-lg:border-[#00000033]
+         max-lg:pt-[19px]
+         max-lg:pr-[27px]
+         max-lg:pb-[14px]
+         max-lg:pl-[28px]
+         max-lg:gap-px
+         max-lg:bg-[var(--white)]flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name
+         max-lg:flex-col
+         max-lg:gap-[9px]
+         max-lg:text-center
+         max-lg:min-w-16
+         max-lg:w-full
+         max-lg:font-normal flex items-center gap-[17px]">
                                 <img src="assets/images/user3.png" alt="user_photo" height="48" width="48">
-                                <p class="username text-xs lg:text-lg ">Jhone doe</p>
+                                <p class="username text-xs lg:text-lg max-lg:!leading-[150%]">Jhone doe</p>
                             </div>
                             <p
-                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-red-600 hover:cursor-pointer transition duration-300">
+                                class="follow text-xs leading-[150%]  hover:text-red-500 hover:cursor-pointertext-custom-blue font-normal lg:text-lg leading-100  hover:cursor-pointer transition duration-300">
                                 Follow</p>
                         </div>
-                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
-                            <div class="photo-name flex items-center gap-[17px]">
+                        <div class="max-lg:flex-col max-lg:!max-w-[119px] max-lg:!w-full  max-lg:border max-lg:border-[#00000033]  max-lg:pt-[19px]  max-lg:pr-[27px]  max-lg:pb-[14px]  max-lg:pl-[28px]  max-lg:gap-px  max-lg:bg-[var(--white)]flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name  max-lg:flex-col  max-lg:gap-[9px]  max-lg:text-center  max-lg:min-w-16  max-lg:w-full  max-lg:font-normal flex items-center gap-[17px]">
                                 <img src="assets/images/user4.png" alt="user_photo" height="48" width="48">
                                 <p class="username text-xs lg:text-lg ">Jhone doe</p>
                             </div>
                             <p
-                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-red-600 hover:cursor-pointer transition duration-300">
+                                class="follow text-xs leading-[150%] transition-colors duration-200 hover:text-red-500 hover:cursor-pointertext-custom-blue font-normal text-lg leading-100 hover:text-red-600 hover:cursor-pointer transition duration-300">
                                 Follow</p>
                         </div>
-                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
-                            <div class="photo-name flex items-center gap-[17px]">
+                        <div class="max-lg:flex-col max-lg:!max-w-[119px] max-lg:!w-full max-lg:border max-lg:border-[#00000033] max-lg:pt-[19px] max-lg:pr-[27px] max-lg:pb-[14px] max-lg:pl-[28px] max-lg:gap-px max-lg:bg-[var(--white)]flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name max-lg:flex-col max-lg:gap-[9px] max-lg:text-center max-lg:min-w-16 max-lg:w-full max-lg:font-normal flex items-center gap-[17px]">
                                 <img src="assets/images/user5.png" alt="user_photo" height="48" width="48">
                                 <p class="username text-xs lg:text-lg ">Jhone doe</p>
                             </div>
                             <p
-                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-red-600 hover:cursor-pointer transition duration-300">
+                                class="follow text-xs leading-[150%] transition-colors duration-200 hover:text-red-500 hover:cursor-pointertext-custom-blue font-normal text-lg leading-100 hover:text-red-600 hover:cursor-pointer transition duration-300">
                                 Follow</p>
                         </div>
-                        <div class="user flex items-center max-w-[339px] w-full justify-between .">
-                            <div class="photo-name flex items-center gap-[17px]">
+                        <div class="max-lg:flex-col max-lg:!max-w-[119px] max-lg:!w-full max-lg:border  max-lg:border-[#00000033] max-lg:pt-[19px] max-lg:pr-[27px] max-lg:pb-[14px] max-lg:pl-[28px] max-lg:gap-px max-lg:bg-[var(--white)]flex items-center max-w-[339px] w-full justify-between .">
+                            <div class="photo-name max-lg:flex-col max-lg:gap-[9px] max-lg:text-center max-lg:min-w-16 max-lg:w-full max-lg:font-normal flex items-center gap-[17px]">
                                 <img src="assets/images/user6.png" alt="user_photo" height="48" width="48">
                                 <p class="username text-xs lg:text-lg   ">Jhone doe</p>
                             </div>
                             <p
-                                class="follow text-[#1A9FFF] font-normal text-lg leading-[100%] hover:text-red-600 hover:cursor-pointer transition duration-300">
+                                class="follow text-xs leading-[150%]   hover:cursor-pointertext-custom-blue font-normal lg:text-lg leading-100 hover:text-red-600 hover:cursor-pointer transition duration-300">
                                 Follow</p>
                         </div>
                     </div>
                 </div>
                 <!-- copywrite -->
                 <p
-                    class="hidden lg:block copywrite cursor-pointer opacity-[60%] mt-[42px] text-sm leading-[150%] font-normal tracking-wider">
+                    class="hidden lg:block copywrite cursor-pointer opacity-60 mt-[42px] text-sm leading-150 font-normal tracking-wider">
                     Copyright@2021</p>
             </div>
         </div>
